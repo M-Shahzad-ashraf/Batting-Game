@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batting Game</title>
+    <link rel="stylesheet" href="Cricket-json.css" />
+  </head>
+  <body>
+    <h2>First choice You & Second Choice Auto</h2>
+    <h1>Bat Ball Stumping Game</h1>
+    <button
+      onclick="
+    
+
+     let computerChoice = genratComputerChoice();
+     let resultMsg = ourResults('Bat', computerChoice);
+     resultFinal('Bat',computerChoice,resultMsg);        
+    "
+    >
+      <img src="images (2).jpeg" alt="bat img" class="choice-img" />
+    </button>
+    <button
+      onclick="        
+         computerChoice = genratComputerChoice();
+         resultMsg = ourResults('Ball',computerChoice);
+         resultFinal('Ball',computerChoice,resultMsg);       
+    "
+    >
+      <img src="images.jpeg" alt="ball-img" class="choice-img" />
+    </button>
+
+    <button
+      onclick="
+         computerChoice = genratComputerChoice();
+         resultMsg = ourResults('Stump', computerChoice);
+         resultFinal('Stump',computerChoice,resultMsg);    
+    "
+    >
+      <img src="images (1).jpeg" alt="stump img" class="choice-img" />
+    </button>
+
+    <h3 id="our-move"></h3>
+    <h3 id="computer-move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="Score"></h3>
+
+    <button
+      onclick="
+     localStorage.clear()
+     resetScore();
+    "
+    >
+      Clear-Scor
+    </button>
+    <script src="Cricket-Jason.js"></script>
+  </body>
+</html>
